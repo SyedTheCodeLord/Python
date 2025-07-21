@@ -1,0 +1,61 @@
+============================
+SNAKES - THE GAME
+=================
+
+WELCOME TO SNAKES!
+
+Prepare to enter a fast-paced world where reflexes matter, apples are pixelated, and the snake is... very, very hungry.
+
+---
+
+## OBJECTIVE:
+
+Eat as many red apples as you can to grow your snake and increase your score.
+Avoid crashing into the walls or your own body — unless you enjoy watching explosions.
+
+---
+
+## HOW TO PLAY:
+
+▶ Arrow Keys = Move the snake
+▶ M = Toggle background music (On/Off)
+▶ Alt (Left/Right) = Pause/Resume the game
+▶ Spacebar = Start the game from the welcome screen
+▶ Enter = Restart after Game Over
+
+---
+
+## SCORING:
+
+🍎 Each apple gives you +10 points
+💀 One crash and it’s GAME OVER
+💾 Your highest score is automatically saved in "High Score.txt"
+
+---
+
+## MUSIC:
+
+🎵 "On & On (Slowed)" by Cartoon plays in the background
+💥 A satisfying explosion sound plays when you crash (you're welcome)
+
+---
+
+## FILES INCLUDED:
+
+✔ Snakes.py — The main game
+✔ Snake.png — Background image
+✔ Back.mp3 — Background music
+✔ Game Over.mp3 — Death explosion sound
+✔ High Score.txt — Stores your high score
+✔ Description.txt — You’re reading it now
+
+---
+
+## CREDITS:
+
+🧠 Developed by: Shounak Samaddar
+🧑‍💻 Built with: Python (Pygame library)
+
+---
+
+Happy slithering! 🐍
