@@ -82,19 +82,22 @@ class LinearEquationCalculator:
     def display_welcome(self):
         """Display welcome message"""
         welcome_msg = """╔══════════════════════════════════════════════════════════════════════╗
-║                    🧮 MATH TERMINAL 🧮                                ║
+║                    🧮 MATH TERMINAL 🧮                               ║
 ║                        Standalone Terminal Version                   ║
 ╚══════════════════════════════════════════════════════════════════════╝
+
+By BRACISTONE STUDIOS.
 
 💡 Available Commands:
    • equation("your_equation")  - Solve equations
    • verify("your_equation")    - Check if equation is true
    • simplify("expression")     - Simplify expressions
-   • expression("expression")   - Analyze expressions
+   • expression("expression")   - Solve Arithmetic expressions
    • guide()                    - Show detailed tutorial
 
 🚀 Quick Start: Try typing → equation("x + 5 = 10")
 📚 Need help? Type → guide()
+[Then Press Enter Key.]
 
 Ready to calculate! 🎯
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -148,7 +151,7 @@ Ready to calculate! 🎯
         """Display tutorial and usage instructions"""
         guide_text = """
 ╔══════════════════════════════════════════════════════════════════════╗
-║            📚 LINEAR EQUATION CALCULATOR - TUTORIAL 📚               ║
+║            📚 MATH TERMINAL (CALCULATOR) - TUTORIAL 📚               ║
 ╚══════════════════════════════════════════════════════════════════════╝
 
 🎯 HOW TO USE THIS CALCULATOR:
@@ -157,35 +160,38 @@ Just type one of the 5 commands below, EXACTLY as shown!
 🔢 1. SOLVE AN EQUATION (Find what x, y, etc. equals)
 ──────────────────────────────────────────────────────────────────────
    Type: equation("your_equation_here")
-   What it does: Finds the value of variables
+   What it does: Finds the value of variables.
    📝 Example: equation("2*x + 5 = 13")
-   💡 This will tell you x = 4
+   💡 This will tell you x = 4.
+   🔅 This calculator will only return a single solution even for variables with finite multiple solutions!
 
 ✅ 2. CHECK IF AN EQUATION IS TRUE
 ──────────────────────────────────────────────────────────────────────
    Type: verify("your_equation_here")
-   What it does: Checks if both sides are equal
+   What it does: Checks if both sides are equal.
    📝 Example: verify("3 + 4 = 7")
-   💡 This will say TRUE or FALSE
+   💡 This will say eithet TRUE or FALSE.
 
 🔧 3. SIMPLIFY AN EXPRESSION
 ──────────────────────────────────────────────────────────────────────
    Type: simplify("your_expression_here")
-   What it does: Makes expressions shorter/cleaner
+   What it does: Makes expressions shorter/cleaner.
    📝 Example: simplify("x + x + x")
-   💡 This will give you 3*x
+   💡 This will give you 3*x.
 
-🧮 4. WORK WITH AN EXPRESSION (No solving)
+🧮 4. WORK WITH AN EXPRESSION (No Algebraic Manipulation!)
 ──────────────────────────────────────────────────────────────────────
    Type: expression("your_expression_here")
-   What it does: Shows you the expression info
-   📝 Example: expression("2*x + 3*y")
-   💡 This tells you about variables in it
+   What it does: Shows you the expression info and solves arithmetic expressions.
+   📝 Example 1: expression("2*x + 3*y")
+   💡 This tells you about the variables in it.
+   📝 Example 2: expression("(900/4 + 25)*4 - 20")
+   💡 This gives you the result 980.
 
 ❓ 5. SHOW THIS HELP AGAIN
 ──────────────────────────────────────────────────────────────────────
    Type: guide()
-   💡 Shows this tutorial whenever you're confused
+   💡 Shows this tutorial whenever you're confused.
 
 📋 IMPORTANT RULES (Please read!):
 ──────────────────────────────────────────────────────────────────────
@@ -210,6 +216,29 @@ Just type one of the 5 commands below, EXACTLY as shown!
    You type: simplify("x + x + x + 2*x")
    You get: 5*x
 
+🧠 Available Mathematical Functions:
+──────────────────────────────────────────────────────────────────────
+🍪 abs() --> Absolute Value.
+🍪 sin() , cos() , tan() etc. --> Trigonometric Functions 😉.
+🍪 log(x, b) --> Logarithm {a = Argument, b = Base}
+🍪 ln(x) --> Natural Log (Log with base e {Euler's Number})
+🍪 exp(x) --> Exponential {e**(x)}
+🍪 sqrt(a) --> Square root of 'a'.
+🍪 root(a, b) = a**(1/b)
+🍪 factor(x) --> Factoring Polynomials.
+🍪 diff(y, x) = dy/dx {Derivative of y with respect to x.} 🔥
+🍪 integrate(y, (x, a, b)) =  {Integral of y with respect to x from a to b.} 💥
+
+💡Type ' guide(functions) ' to get a complete list of all Mathematical Functions available!
+
+NOTE:
+──────────────────────────────────────────────────────────────────────
+💡 'pi' is recognized as the famous irrational 3.141592...
+❕ Euler's number (e = 2.71828...) is not recognized in input! You can express it as; exp(1) = e**1
+🔷 Only Round Brackets '(' and ')' are valid!
+🌐 This calculator can only compute Real Numbers.
+📖 This calculator has no memory! It does not remember any previous data input by the user.
+
 ❗ COMMON MISTAKES TO AVOID:
 ──────────────────────────────────────────────────────────────────────
 ❌ DON'T type: equation(2*x + 3 = 11)  # Missing quotes!
@@ -221,16 +250,406 @@ Just type one of the 5 commands below, EXACTLY as shown!
 ❌ DON'T type: equation("x^2 = 4")  # Use ** not ^!
 ✅ DO type: equation("x**2 = 4")
 
+❌ DON'T type: expression("5,000 + 2,000")  # Commas or Space between a single number is invalid!
+✅ DO type: expression("5000 + 2000")
+
 🚀 READY TO START? Try typing one of these:
 ──────────────────────────────────────────────────────────────────────
 equation("x + 5 = 10")
 simplify("2*x + 3*x")
 verify("2 + 2 = 4")
+expression("(cos(pi)*sqrt(1024)*log(729, 3))")
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 """
         self.print_output(guide_text)
-    
+    def guide_functions(self):
+        """Display complete list of available mathematical functions"""
+        functions_text = """
+╔══════════════════════════════════════════════════════════════════════╗
+║ 🧮 MATH TERMINAL — COMPLETE REFERENCE                                ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+📐 TRIGONOMETRIC FUNCTIONS
+──────────────────────────────────────────────────────────────────────
+ sin(x), cos(x), tan(x) --> Basic trigonometric functions
+ sec(x), csc(x), cot(x) --> Reciprocal trigonometric functions
+ asin(x), acos(x), atan(x) --> Inverse trigonometric functions
+ asec(x), acsc(x), acot(x) --> Inverse reciprocal trigonometric functions
+ atan2(y, x) --> Two-argument arctangent
+
+🌊 HYPERBOLIC FUNCTIONS
+──────────────────────────────────────────────────────────────────────
+ sinh(x), cosh(x), tanh(x) --> Hyperbolic functions
+ sech(x), csch(x), coth(x) --> Reciprocal hyperbolic functions
+ asinh(x), acosh(x), atanh(x) --> Inverse hyperbolic functions
+ asech(x), acsch(x), acoth(x) --> Inverse reciprocal hyperbolic functions
+
+📊 LOGARITHMIC / EXPONENTIAL
+──────────────────────────────────────────────────────────────────────
+ log(x), ln(x) --> Natural logarithm
+ log(x, b) --> Logarithm with base b
+ exp(x) --> Exponential function
+ sqrt(x), root(x, n) --> Square and nth roots
+ Pow(x, y) --> Symbolic power
+ LambertW(x) --> Lambert W function
+
+🔧 ALGEBRAIC SIMPLIFICATION
+──────────────────────────────────────────────────────────────────────
+ simplify(expr) --> General simplification
+ factor(expr) --> Factor expression
+ expand(expr) --> Expand products and powers
+ collect(expr, x) --> Collect terms in x
+ apart(expr) --> Partial-fraction decomposition
+ together(expr) --> Combine rational terms
+ cancel(expr) --> Cancel common factors
+ ratsimp(expr) --> Rational simplification
+ radsimp(expr) --> Radical simplification
+ powsimp(expr) --> Simplify powers
+ powdenest(expr) --> Combine nested powers
+ sqrtdenest(expr) --> Simplify nested radicals
+ trigsimp(expr) --> Simplify trigonometric expressions
+ fu(expr) --> Advanced trigonometric simplification
+ combsimp(expr) --> Simplify combinatorial expressions
+ logcombine(expr) --> Combine logarithms
+ expand_log(expr) --> Expand logarithms
+ expand_power_base(expr) --> Expand power bases
+ expand_power_exp(expr) --> Expand power exponents
+ nsimplify(expr) --> Find simpler exact forms
+ posify(expr) --> Replace symbols with positive equivalents
+ hypersimp(expr) --> Simplify hypergeometric terms
+
+🧮 POLYNOMIAL FUNCTIONS
+──────────────────────────────────────────────────────────────────────
+ Poly(expr, x) --> Polynomial object
+ degree(expr, x) --> Polynomial degree
+ LC(poly), LM(poly), LT(poly) --> Leading coefficient, monomial, term
+ factor_list(expr) --> Factorization with multiplicities
+ sqf(expr), sqf_list(expr) --> Square-free factorization
+ div(f, g), quo(f, g), rem(f, g) --> Polynomial division operations
+ gcd(f, g), lcm(f, g) --> Polynomial GCD and LCM
+ gcdex(f, g), half_gcdex(f, g) --> Extended GCD operations
+ resultant(f, g, x) --> Polynomial resultant
+ discriminant(f, x) --> Polynomial discriminant
+ subresultants(f, g, x) --> Subresultant sequence
+ groebner(F, x, y, ...) --> Gröbner basis
+ roots(poly), nroots(poly) --> Exact and numerical roots
+ ground_roots(poly) --> Ground-domain roots
+ terms_gcd(expr) --> Remove common term factors
+ degree_list(expr) --> Degrees of polynomial generators
+
+🔥 CALCULUS
+──────────────────────────────────────────────────────────────────────
+ diff(expr, x) --> Differentiate
+ Derivative(expr, x) --> Unevaluated derivative
+ integrate(expr, x) --> Integrate
+ Integral(expr, x) --> Unevaluated integral
+ limit(expr, x, a) --> Limit
+ Limit(expr, x, a) --> Unevaluated limit
+ series(expr, x, x0, n) --> Taylor/Laurent series
+ aseries(expr, x) --> Asymptotic series
+ Order(expr, x) --> Big-O order term
+ Sum(expr, (i, a, b)) --> Symbolic summation object
+ Product(expr, (i, a, b)) --> Symbolic product object
+ summation(expr, (i, a, b)) --> Compute a summation
+ product(expr, (i, a, b)) --> Compute a product
+
+🔢 NUMBER THEORY
+──────────────────────────────────────────────────────────────────────
+ factorial(n), factorial2(n) --> Factorials
+ subfactorial(n) --> Subfactorial / derangement count
+ binomial(n, k) --> Binomial coefficient
+ bell(n), bernoulli(n) --> Bell and Bernoulli numbers
+ catalan(n), euler(n) --> Catalan and Euler numbers
+ genocchi(n), harmonic(n) --> Genocchi and harmonic numbers
+ fibonacci(n), lucas(n) --> Fibonacci and Lucas numbers
+ tribonacci(n) --> Tribonacci numbers
+ isprime(n) --> Test primality
+ prime(n) --> nth prime
+ primepi(n) --> Prime-counting function
+ nextprime(n), prevprime(n) --> Adjacent primes
+ factorint(n) --> Prime factorization
+ primefactors(n) --> Distinct prime factors
+ divisors(n) --> Positive divisors
+ proper_divisors(n) --> Proper divisors
+ divisor_count(n) --> Number of divisors
+ divisor_sigma(n) --> Sum of divisor powers
+ totient(n) --> Euler's totient
+ reduced_totient(n) --> Carmichael function
+ mobius(n) --> Möbius function
+ mod_inverse(a, m) --> Modular inverse
+ crt(moduli, residues) --> Chinese remainder theorem
+ multiplicity(p, n) --> Multiplicity of p in n
+ perfect_power(n) --> Test perfect powers
+ legendre(n, k) --> Legendre symbol
+ continued_fraction(x) --> Continued fraction
+ continued_fraction_periodic(...) --> Periodic continued fraction
+ continued_fraction_iterator(x) --> Continued-fraction iterator
+ continued_fraction_convergents() --> Continued-fraction convergents
+
+🎲 COMBINATORICS
+──────────────────────────────────────────────────────────────────────
+ Permutation(n, k) --> Permutation object
+ Cycle(...) --> Permutation cycle
+ RisingFactorial(x, k), rf(x, k) --> Rising factorial
+ FallingFactorial(x, k), ff(x, k) --> Falling factorial
+ MultiFactorial(n, k) --> Multifactorial
+ stirling(n, k) --> Stirling numbers
+ partition(n) --> Integer partitions
+ andre(n) --> André numbers
+ motzkin(n) --> Motzkin numbers
+
+📏 ROUNDING / MAGNITUDE
+──────────────────────────────────────────────────────────────────────
+ Abs(x), abs(x) --> Absolute value
+ floor(x), ceiling(x) --> Floor and ceiling
+ frac(x) --> Fractional part
+ sign(x) --> Sign of expression
+ Min(...), Max(...) --> Minimum and maximum
+
+🧠 COMPLEX NUMBERS
+──────────────────────────────────────────────────────────────────────
+ re(x), im(x) --> Real and imaginary parts
+ conjugate(x) --> Complex conjugate
+ arg(x) --> Complex argument
+ polar_lift(x) --> Lift to polar representation
+ periodic_argument(x) --> Periodic complex argument
+ principal_branch(x) --> Principal branch
+
+🌟 GAMMA / RELATED FUNCTIONS
+──────────────────────────────────────────────────────────────────────
+ gamma(x), loggamma(x) --> Gamma and logarithmic Gamma
+ digamma(x) --> Digamma function
+ polygamma(n, x) --> Polygamma function
+ trigamma(x) --> Trigamma function
+ beta(x, y) --> Beta function
+
+📡 ERROR / INTEGRAL SPECIAL FUNCTIONS
+──────────────────────────────────────────────────────────────────────
+ erf(x), erfc(x), erfi(x) --> Error functions
+ erf2(a, b) --> Generalized error function
+ Ei(x), li(x) --> Exponential and logarithmic integrals
+ Si(x), Ci(x) --> Sine and cosine integrals
+ Shi(x), Chi(x) --> Hyperbolic integrals
+ fresnelc(x), fresnels(x) --> Fresnel integrals
+
+📈 BESSEL FUNCTIONS
+──────────────────────────────────────────────────────────────────────
+ besselj(n, x), bessely(n, x) --> Bessel functions of first/second kind
+ besseli(n, x), besselk(n, x) --> Modified Bessel functions
+ hankel1(n, x), hankel2(n, x) --> Hankel functions
+
+🌌 AIRY FUNCTIONS
+──────────────────────────────────────────────────────────────────────
+ airyai(x), airybi(x) --> Airy functions
+ airyaiprime(x), airybiprime(x) --> Airy derivatives
+
+📜 ORTHOGONAL POLYNOMIALS
+──────────────────────────────────────────────────────────────────────
+ legendre(n, x) --> Legendre polynomial
+ assoc_legendre(n, m, x) --> Associated Legendre polynomial
+ hermite(n, x) --> Hermite polynomial
+ hermite_prob(n, x) --> Probabilists' Hermite polynomial
+ laguerre(n, x) --> Laguerre polynomial
+ assoc_laguerre(n, k, x) --> Associated Laguerre polynomial
+ chebyshevt(n, x) --> Chebyshev polynomial of first kind
+ chebyshevu(n, x) --> Chebyshev polynomial of second kind
+ gegenbauer(n, a, x) --> Gegenbauer polynomial
+ jacobi(n, a, b, x) --> Jacobi polynomial
+
+🌀 HYPERGEOMETRIC FUNCTIONS
+──────────────────────────────────────────────────────────────────────
+ hyper(a_s, b_s, z) --> Generalized hypergeometric function
+ hyperexpand(expr) --> Expand hypergeometric functions
+ meijerg(...) --> Meijer G-function
+ appellf1(a,b1,b2,c,x,y) --> Appell F1 function
+
+🟣 ELLIPTIC FUNCTIONS
+──────────────────────────────────────────────────────────────────────
+ elliptic_k(m) --> Complete elliptic integral K
+ elliptic_e(m) --> Complete elliptic integral E
+ elliptic_f(phi, m) --> Incomplete elliptic integral F
+ elliptic_e(phi, m) --> Incomplete elliptic integral E
+ elliptic_pi(n, m) --> Complete elliptic integral Π
+ jacobi_sn(u, m) --> Jacobi elliptic sine
+ jacobi_cn(u, m) --> Jacobi elliptic cosine
+ jacobi_dn(u, m) --> Jacobi elliptic delta function
+
+📊 ZETA / POLYLOGARITHMIC
+──────────────────────────────────────────────────────────────────────
+ zeta(s) --> Riemann/Hurwitz zeta function
+ dirichlet_eta(s) --> Dirichlet eta function
+ polylog(s, z) --> Polylogarithm
+ lerchphi(z, s, a) --> Lerch transcendent
+
+🔷 SETS
+──────────────────────────────────────────────────────────────────────
+ FiniteSet(...) --> Finite set
+ Interval(a, b) --> Interval
+ Union(...) --> Union of sets
+ Intersection(...) --> Intersection of sets
+ Complement(A, B) --> Set difference
+ ProductSet(A, B) --> Cartesian product
+ EmptySet --> Empty set
+ UniversalSet --> Universal set
+ Contains(x, S) --> Set membership
+ S.Integers, S.Naturals --> Integer and natural-number sets
+ S.Naturals0 --> Naturals including zero
+ S.Rationals, S.Reals --> Rational and real sets
+ S.Complexes --> Complex-number set
+
+🧠 LOGIC AND BOOLEAN ALGEBRA
+──────────────────────────────────────────────────────────────────────
+ And(...), Or(...) --> Logical AND / OR
+ Not(...), Xor(...) --> Logical NOT / XOR
+ Nand(...), Nor(...) --> NAND / NOR
+ Implies(p, q) --> Logical implication
+ Equivalent(p, q) --> Logical equivalence
+ simplify_logic(expr) --> Simplify Boolean logic
+ to_cnf(expr) --> Convert to conjunctive normal form
+ to_dnf(expr) --> Convert to disjunctive normal form
+ to_nnf(expr) --> Convert to negation normal form
+ to_anf(expr) --> Convert to algebraic normal form
+
+🍪 MATRICES / LINEAR ALGEBRA
+──────────────────────────────────────────────────────────────────────
+ Matrix(...), ImmutableMatrix(...) --> Matrix objects
+ zeros(r, c), ones(r, c) --> Zero and one matrices
+ eye(n), diag(...) --> Identity and diagonal matrices
+ Matrix.det() --> Determinant
+ Matrix.inv() --> Inverse
+ Matrix.transpose() --> Transpose
+ Matrix.trace() --> Trace
+ Matrix.rank() --> Rank
+ Matrix.charpoly() --> Characteristic polynomial
+ Matrix.eigenvals() --> Eigenvalues
+ Matrix.eigenvects() --> Eigenvalues and eigenvectors
+ Matrix.rref() --> Reduced row-echelon form
+ Matrix.nullspace() --> Null space
+ Matrix.columnspace() --> Column space
+ Matrix.rowspace() --> Row space
+ Matrix.adjugate() --> Adjugate matrix
+ Matrix.cofactor() --> Cofactor
+ Matrix.cofactor_matrix() --> Cofactor matrix
+ Matrix.minor() --> Matrix minor
+ Matrix.norm() --> Matrix norm
+ Matrix.dot() --> Matrix/vector dot product
+ Matrix.cross() --> Matrix/vector cross product
+ Matrix.LUdecomposition() --> LU decomposition
+ Matrix.QRdecomposition() --> QR decomposition
+ Matrix.cholesky() --> Cholesky decomposition
+ Matrix.LDLdecomposition() --> LDL decomposition
+ Matrix.diagonalize() --> Diagonalization
+ Matrix.jordan_form() --> Jordan normal form
+
+➡️ VECTOR CALCULUS
+──────────────────────────────────────────────────────────────────────
+ CoordSys3D(...) --> 3D coordinate system
+ Point(...) --> Point/vector geometry
+ Vector(...) --> Vector object
+ Dot(...) --> Dot product
+ Cross(...) --> Cross product
+ Del(...) --> Del operator
+ gradient(...) --> Gradient
+ divergence(...) --> Divergence
+ curl(...) --> Curl
+ Laplacian(...) --> Laplacian
+ directional_derivative(...) --> Directional derivative
+
+📐 DIFFERENTIAL EQUATIONS
+──────────────────────────────────────────────────────────────────────
+ dsolve(...) --> Differential-equation solver
+ classify_ode(...) --> Classify an ODE
+ checkodesol(...) --> Check an ODE solution
+ ode_order(...) --> ODE order
+ constantsimp(...) --> Simplify integration constants
+ pdsolve(...) --> Partial differential-equation solver
+ classify_pde(...) --> Classify a PDE
+ checkpdesol(...) --> Check a PDE solution
+
+🎲 PROBABILITY / STATISTICS
+──────────────────────────────────────────────────────────────────────
+ RandomSymbol(...) --> Random symbolic variable
+ RandomIndexedSymbol(...) --> Indexed random variable
+ P(...) --> Probability
+ E(...) --> Expected value
+ variance(...) --> Variance
+ covariance(...) --> Covariance
+ density(...) --> Probability density
+ sample(...) --> Random sample
+ Normal(...) --> Normal distribution
+ Exponential(...) --> Exponential distribution
+ Poisson(...) --> Poisson distribution
+ Binomial(...) --> Binomial distribution
+ Geometric(...) --> Geometric distribution
+ Gamma(...) --> Gamma distribution
+ Beta(...) --> Beta distribution
+ Uniform(...) --> Uniform distribution
+ DiscreteUniform(...) --> Discrete uniform distribution
+ ContinuousUniform(...) --> Continuous uniform distribution
+
+📊 VECTOR / TENSOR / GEOMETRY
+──────────────────────────────────────────────────────────────────────
+ TensorProduct(...) --> Tensor product
+ TensorIndexType(...) --> Tensor index type
+ tensor_indices(...) --> Tensor indices
+ tensorhead(...) --> Tensor head
+ Point(...) --> Geometric point
+ Line(...) --> Line
+ Segment(...) --> Line segment
+ Circle(...) --> Circle
+ Triangle(...) --> Triangle
+ Polygon(...) --> Polygon
+ Plane(...) --> Plane
+
+📌 CONSTANTS
+──────────────────────────────────────────────────────────────────────
+ pi --> π
+ E --> Euler's number
+ I --> Imaginary unit
+ oo --> Infinity
+ zoo --> Complex infinity
+ nan --> Not-a-Number
+ EulerGamma --> Euler-Mascheroni constant
+ Catalan --> Catalan's constant
+ GoldenRatio --> Golden ratio
+
+🔣 SYMBOLS / RELATIONS
+──────────────────────────────────────────────────────────────────────
+ Symbol(...), symbols(...) --> Create symbols
+ Dummy(...) --> Dummy symbol
+ Wild(...) --> Wildcard symbol
+ Integer(...) --> Exact integer
+ Rational(...) --> Exact rational number
+ Float(...) --> Floating-point number
+ Eq(...) --> Equality relation
+ Ne(...) --> Not-equal relation
+ Lt(...), Le(...) --> Less-than relations
+ Gt(...), Ge(...) --> Greater-than relations
+
+🔄 NUMERICAL EVALUATION
+──────────────────────────────────────────────────────────────────────
+ N(expr) --> Numerical evaluation
+ evalf(expr) --> Numerical evaluation with precision
+ lambdify(args, expr) --> Convert expression to numerical function
+ nsimplify(expr) --> Convert numerical form to exact form
+
+🛠️EXPRESSION / SYMBOL TOOLS
+──────────────────────────────────────────────────────────────────────
+ subs(expr, ...) --> Substitute values/expressions
+ xreplace(expr, ...) --> Structural replacement
+ replace(expr, ...) --> Pattern-based replacement
+ count_ops(expr) --> Count operations
+ free_symbols --> Get symbols in expression
+ has(expr, ...) --> Test for contained objects
+ preorder_traversal(expr) --> Preorder expression traversal
+ postorder_traversal(expr) --> Postorder expression traversal
+
+💫 THANK YOU!
+═══════════════════════════════════════════════════════════════════════════════
+"""
+        self.print_output(functions_text)
+        
     def validate_input(self, input_str):
         """Validate the input string for rules compliance"""
         # Check for equals signs
@@ -284,7 +703,7 @@ verify("2 + 2 = 4")
             self.print_output(f"💡 Result: {result}")
         else:
             self.print_output(f"🔤 Variables found: {[str(var) for var in variables]}")
-            self.print_output("ℹ️  This expression contains variables and cannot be evaluated to a single number.")
+            self.print_output("ℹ️ This expression contains variables and cannot be evaluated to a single number.")
             self.print_output("💭 Use simplify() to simplify the expression or equation() to solve for variables.")
     
     def verify(self, equation_str):
@@ -451,6 +870,10 @@ verify("2 + 2 = 4")
         if command == "guide()":
             self.guide()
             return True
+            # Check for guide(functions)      
+        if command == "guide(functions)":     
+            self.guide_functions()            
+            return True                       
             
         # Parse function calls with parameters
         patterns = [
@@ -468,9 +891,8 @@ verify("2 + 2 = 4")
         
         # Invalid command
         self.print_output(f"❌ Invalid command: {command}")
-        self.print_output("💡 Running guide() to show available commands...")
+        self.print_output("💡 Type ' guide() ' to see how this calculator works.")
         self.print_output("")
-        self.guide()
         return True
     
     def run(self):
@@ -483,4 +905,4 @@ verify("2 + 2 = 4")
 # Run the calculator
 if __name__ == "__main__":
     calculator = LinearEquationCalculator()
-    calculator.run()
+    calculator.run() 
