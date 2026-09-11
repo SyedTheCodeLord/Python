@@ -53,7 +53,7 @@ Avoid crashing into the walls or your own body — unless you enjoy watching exp
 
 ## CREDITS:
 
-🧠 Developed by: Shounak Samaddar
+🧠 Developer: Syed Azfar
 🧑‍💻 Built with: Python (Pygame library)
 
 ---
