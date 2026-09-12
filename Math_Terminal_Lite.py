@@ -82,24 +82,19 @@ class LinearEquationCalculator:
     def display_welcome(self):
         """Display welcome message"""
         welcome_msg = """╔══════════════════════════════════════════════════════════════════════╗
-║                    🧮 MATH TERMINAL 🧮                               ║
+║                     MATH TERMINAL                                    ║
 ║                        Standalone Terminal Version                   ║
 ╚══════════════════════════════════════════════════════════════════════╝
 
 By BRACISTONE STUDIOS.
 
-💡 Available Commands:
-   • equation("your_equation")  - Solve equations
-   • verify("your_equation")    - Check if equation is true
+Available Commands:
+   • equation("equation")       - Solve equations
+   • verify("equation")         - Check if equation is true
    • simplify("expression")     - Simplify expressions
    • expression("expression")   - Solve Arithmetic expressions
-   • guide()                    - Show detailed tutorial
 
-🚀 Quick Start: Try typing → equation("x + 5 = 10")
-📚 Need help? Type → guide()
-[Then Press Enter Key.]
-
-Ready to calculate! 🎯
+Ready to calculate!
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 """
