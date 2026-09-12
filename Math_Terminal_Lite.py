@@ -73,8 +73,8 @@ class LinearEquationCalculator:
     def display_welcome(self):
         """Display welcome message"""
         welcome_msg = """╔══════════════════════════════════════════════════════════════════════╗
-║                     MATH TERMINAL                                    ║
-║                        Standalone Terminal Version                   ║
+║                     MATH TERMINAL [OLD]                              ║
+║                         Lite Version                                 ║
 ╚══════════════════════════════════════════════════════════════════════╝
 
 By BRACISTONE STUDIOS.
